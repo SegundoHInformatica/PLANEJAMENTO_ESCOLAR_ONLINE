@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Planejamento escolar on-line</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <style>
+        /* Adicione estilos para a descrição do banner */
+        .descricao-fetec {
+            display: none; /* Iniciar como oculto */
+            color: white; /* Exemplo de cor da descrição */
+            margin-top: 10px; /* Espaçamento superior */
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner com Evento em Destaque -->
+    <header class="banner">
+        <img src="src/imagens/banner.jpeg" alt="Banner da Festa Anual de Verão" class="banner-image">
+        <div class="overlay">
+            <h1 class="titulo-banner" onclick="toggleDescription()">Quinta edição da FETEC</h1>
+            <p>Participe do evento mais esperado do ano!</p>
+            <div class="descricao-fetec" id="descricaoFetec">
+                <p>Fetec é um projeto realizado pelo Centro Territorial de Educação Profissional de Itaparica (CETEPI-1), com o objetivo de levar os alunos à prática profissional, onde eles demonstram o conhecimento adquirido nos seus respectivos cursos. Esse evento é realizado no dia 25 de outubro.</p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Sessão de Cards de Eventos -->
+    <section class="eventos escolares">
+        <h2 class="titulo-eventos escolares">Eventos</h2>
+        <p>navegue e se informe</p>
+        
+        <div class="eventos-grid">
+            <!-- Primeiro grupo de 5 cards -->
+            <div class="card" onclick="zoomFlipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="src/imagens/gincana.jpeg" alt="Imagem do Evento 1">
+                        <h3>15 anos do CETEPI-1</h3>
+                        <p>Data: 18/04/2024</p>
+                    </div>
+                    <div class="card-back">
+                        <h3></h3>
+                        <p>Uma celebração em grande estilo do 15º aniversário do CETEPI-1, com várias atividades e homenagens!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="zoomFlipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="src/imagens/interclasse.jpg" alt="Imagem do Evento 2">
+                        <h3>Interclasse</h3>
+                        <p>Data: 05/06/2024 a 16/06/2024</p>
+                    </div>
+                    <div class="card-back">
+                        <h3></h3>
+                        <p>Competição esportiva entre os alunos do CETEPI-1, com várias modalidades e muita diversão!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="zoomFlipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="src/imagens/campeonato de canoagem.jpeg" alt="Imagem do Evento 3">
+                        <h3>Campeonato de Canoagem</h3>
+                        <p>Data: 08/06/2024</p>
+                    </div>
+                    <div class="card-back">
+                        <h3></h3>
+                        <p>Competição de canoa havaiana, promovendo a prática esportiva e o contato com a natureza.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="zoomFlipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="src/imagens/snju.jpg" alt="Imagem do Evento 4">
+                        <h3>São João</h3>
+                        <p>Data: 21/06/2024</p>
+                    </div>
+                    <div class="card-back">
+                        <h3></h3>
+                        <p>Uma festa cheia de tradições, comidas típicas e danças como a quadrilha!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="zoomFlipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="src/imagens/familia.jpg" alt="Imagem do Evento 5">
+                        <h3>Dia da Família na Escola</h3>
+                        <p>Data: 06/07/2024</p>
+                    </div>
+                    <div class="card-back">
+                        <h3></h3>
+                        <p>Um dia de integração entre pais e filhos, com atividades e oficinas na escola.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segundo grupo de 5 cards -->
+        <div class="eventos-grid">
+            <div class="card" onclick="zoomFlipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="src/imagens/SIC.jpg" alt="Imagem do Evento 11">
+                        <h3>SIC</h3>
+                        <p>Data: 10/08/2024 á 15/08/2025</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>SIC</h3>
+                        <p>A Semana Integrada de Cursos do CETEP é um evento voltado para a integração entre os alunos, professores e a comunidade acadêmica. Durante a semana, são oferecidas palestras, oficinas, e outras atividades que promovem o aprendizado prático e a troca de experiências entre os diversos cursos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="zoomFlipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="src/imagens/aulao.jpeg" alt="Imagem do Evento 12">
+                        <h3>Aulão ENEM</h3>
+                        <p>Data: 20/08/2025</p>
+                    </div>
+                    <div class="card-back">
+                        <h3></h3>
+                        <p>Os alunos dos 3° anos do CETEP Itaparica tiveram uma grande oportunidade com esse aulão de redação com o professor Edson Barreto. Uma excelente chance para se prepararem melhor para o ENEM e desenvolverem suas habilidades de escrita!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="zoomFlipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="src/imagens/7 de setembro.jpeg" alt="Imagem do Evento 13">
+                        <h3>7 de Setembro</h3>
+                        <p>Data: 21/09/2024</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>7 de Setembro</h3>
+                        <p>É marcado por desfiles cívicos, com a participação de escolas, bandas marciais e grupos locais. O evento celebra a independência do Brasil e reúne a comunidade em um ato de patriotismo, destacando a história e os valores nacionais, além de promover a integração entre instituições locais e a população.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="zoomFlipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="src/imagens/em movimento .jpg" alt="Imagem do Evento 14">
+                        <h3>Educação em movimento</h3>
+                        <p>Data: 21/09/2025</p>
+                    </div>
+                    <div class="card-back">
+                        <p>O CETEP Itaparica marcou presença na 1ª Edição do Programa Educação em Movimento, uma bela iniciativa da Secretaria de Educação!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="zoomFlipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="src/imagens/dia das bruxas.jpg" alt="Imagem do Evento 15">
+                        <h3>Halloween</h3>
+                        <p>Data: 31/10/2024</p>
+                    </div>
+                    <div class="card-back">
+                        <h3></h3>
+                        <p>O Halloween, ou Dia das Bruxas, é uma festa em que as pessoas se fantasiam de personagens assustadores, decoram suas casas com abóboras e participam de festas à fantasia, além de muitas brincadeiras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <img src="src/imagens/logo_insta-removebg-preview.png" width="110px" height="110px" alt="Instagram logo">
+        <p>&copy; 2024 - Todos os direitos reservados para o Segundo Ano H.</p>
+    </footer>
+    
+
+
+    <!-- JavaScript -
+    <script>
+        // Função para alternar a exibição da descrição do banner
+        function toggleDescription() {
+            var descricaoFetec = document.getElementById("descricaoFetec");
+            if (descricaoFetec.style.display === "none") {
+                descricaoFetec.style.display = "block";
+            } else {
+                descricaoFetec.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

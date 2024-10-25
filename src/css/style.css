@@ -1,0 +1,295 @@
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #9e53ca; /* Fundo principal roxo */
+  color: #fff;
+}
+
+/* Estilo do Banner */
+.banner {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.titulo-banner {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+.descricao-fetec {
+  max-height: 0;               /* Inicialmente colapsado */
+  overflow: hidden;            /* Oculta o conteúdo excedente */
+  opacity: 0;                  /* Transparente */
+  transition: max-height 0.5s ease, opacity 0.5s ease; /* Animação suave */
+}
+
+.descricao-fetec.show {
+  max-height: 500px;           /* Define um limite de altura */
+  opacity: 1;                  /* Totalmente visível */
+}
+
+
+/* Seção de Eventos */
+.eventos {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #9e53ca;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.eventos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.titulo-eventos {
+  font-family: 'DM Serif Display', serif;
+  color: white;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.eventos p {
+  margin-bottom: 30px;
+  color: #ddd;
+  font-size: 1.1em;
+}
+
+/* Estilo dos Cards */
+.card {
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner,
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card.flipped {
+  transform: scale(1.1);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Frente do Card */
+.card-front {
+  background-color: #4b206b; /* Roxo escuro */
+}
+
+.card-front img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-front h3,
+.card-front p {
+  color: white;
+}
+
+/* Verso do Card */
+/* Verso do Card */
+.card-back {
+  background-color: #37144d; /* Roxo profundo */
+  transform: rotateY(180deg);
+  overflow-y: auto; /* Permitir rolagem vertical */
+  max-height: 280px; /* Limite de altura para o conteúdo */
+}
+
+.card-back h3 {
+  color: #cda9e6;
+  margin-bottom: 10px;
+}
+
+.card-back p {
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+
+/* Descrição da FETEC */
+.descricao-fetec {
+  margin-top: 10px;
+  color: #ddd;
+  font-size: 0.9em;
+}
+
+/* Carrossel */
+.carrossel {
+  width: 1080px;
+  height: 180px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carrossel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carrossel-item {
+  min-width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.carrossel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carrossel-texto {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 0.8em;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* Botões de navegação */
+.carrossel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carrossel-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.eventos-grid {
+  margin-top: 60px;
+}
+
+/* Rodapé Reduzido e Organizado */
+footer {
+  padding: 5px 0; /* Reduzir a altura */
+  background-color: #9e53ca;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; /* Espaço entre a logo e o copyright */
+}
+
+/* Estilo da Logo do Instagram */
+footer img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain; /* Evitar distorções */
+}
+
+/* Estilo do Copyright */
+footer p {
+  font-size: 1em; /* Ajuste do tamanho para boa leitura */
+  margin: 0; /* Remover margens para ficar mais próximo da logo */
+}
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .banner {
+    height: 200px;
+  }
+
+  .titulo-banner {
+    font-size: 1.8em;
+  }
+
+  .eventos {
+    padding: 20px 10px;
+  }
+
+  .eventos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .carrossel {
+    width: 100%;
+  }
+}
